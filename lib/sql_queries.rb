@@ -27,7 +27,7 @@ def selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_
  (sum(pledges.amount) - projects.funding_goal)  profit 
  FROM projects JOIN pledges 
  ON projects.id = pledges.project_id 
- WHERE profit >= 0
+ --WHERE total_pledge >= projects.funding_goal 
  GROUP BY projects.title"
 end
 
